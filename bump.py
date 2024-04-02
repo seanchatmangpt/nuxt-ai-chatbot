@@ -17,5 +17,14 @@ def main():
     with open('package.json', 'w') as f:
         json.dump(package, f, indent=2)
 
+
+    # Run the git command to add and commit the package.json
+    os.system('git add .')
+    os.system(f'git commit -m "Bump version to {version}"')
+    os.system('git push')
+
+    # Run the command to publish the package
+    os.system('vercel')
+
 if __name__ == '__main__':
     main()
