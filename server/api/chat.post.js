@@ -1,62 +1,40 @@
-// Import the OpenAI library
-import OpenAI from "openai";
+// server/api/chat.post.ts
+import { ActorSystem } from "dpgjs";
+import {
+  OpenAIActor,
+  OpenAICommandMessage,
+  OpenAIEventMessage,
+} from "@/actor/openai-actor";
+import { readBody } from "h3"; // Assuming you're using h3 for HTTP utilities in Nuxt 3
 
-// This function handles the event and makes a request to the OpenAI API using the official client
 export default defineEventHandler(async (event) => {
-  // Initialize the OpenAI client with your API key
-  const openai = new OpenAI({
-    apiKey: "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",
-  });
+  // Assuming there's a global or shared ActorSystem instance you can access
+  const actorSystem = new ActorSystem();
+  const openAIActor = actorSystem.actorOf(OpenAIActor);
 
-  // // Read the previous messages from the request body
   const previousMessages = JSON.parse(await readBody(event));
 
-  // Convert the previous messages to the format expected by the OpenAI API
-  // previousMessages does not have a map function
-  for (const previousMessage of previousMessages) {
-    console.log("Previous Message:", previousMessage);
-  }
+  // Create a command message with the previous messages serialized as a JSON string
+  const commandMessage = new OpenAICommandMessage({
+    content: JSON.stringify(previousMessages),
+  });
 
-  // try {
-  //   // Make a request to the OpenAI Chat API
-  //   const response = await openai.chat.completions.create({
-  //     model: "gpt-3.5-turbo",
-  //     messages: previousMessages,
-  //     temperature: 0.9,
-  //     max_tokens: 512,
-  //     top_p: 1.0,
-  //     frequency_penalty: 0,
-  //     presence_penalty: 0.6,
-  //     stop: [" User:", " AI:"],
-  //   });
-  //
-  //   // Extract the response text from the first choice
-  //   const result = response.choices[0].message.content;
+  // Send the command message to the OpenAIActor
+  actorSystem.publishMessage(commandMessage);
+
+  // Here we assume an enhanced ActorSystem with the ability to wait for a specific message type
+  // This might require custom implementation within your ActorSystem class
   try {
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: previousMessages,
-      temperature: 1,
-      max_tokens: 256,
-      top_p: 1,
-      frequency_penalty: 0,
-      presence_penalty: 0,
-    });
-    const result = response.choices[0].message.content;
-
-    console.log("Result:", result);
-
-    // Return the result
+    const eventMessage = await actorSystem.waitForMessage(OpenAIEventMessage);
     return {
       role: "assistant",
-      content: result,
+      content: eventMessage.content,
     };
   } catch (error) {
-    // Handle any errors that occur during the API request
-    console.error("Error calling OpenAI API:", error);
+    console.error("Error waiting for OpenAI response:", error);
     return {
       role: "assistant",
-      content: "An error occurred while processing your request.",
+      content: "An error occurred while waiting for the response.",
     };
   }
 });
