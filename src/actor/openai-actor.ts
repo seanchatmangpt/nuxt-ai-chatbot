@@ -1,5 +1,6 @@
 import { ActorSystem, BaseActor, BaseMessage } from "dpgjs";
 import OpenAI from "openai";
+import * as process from "process";
 
 class OpenAICommandMessage extends BaseMessage {
   constructor(data: Partial<BaseMessage>) {
@@ -18,7 +19,9 @@ class OpenAIActor extends BaseActor {
 
   constructor(actorId: number, actorSystem: ActorSystem) {
     super(actorId, actorSystem);
-    this.openai = new OpenAI();
+    this.openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
   }
 
   async handleOpenAICommandMessage(
