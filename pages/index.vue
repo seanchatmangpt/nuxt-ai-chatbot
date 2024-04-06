@@ -58,7 +58,9 @@ const sendPrompt = async () => {
 
 <template>
   <div class="max-w-xl mx-auto text-black">
-    <h1 class="my-8 text-5xl font-bold text-center text-black">AI Chatbot</h1>
+    <h1 class="my-8 text-5xl font-bold text-center text-black">
+      AI Chatbot v2024.4.5
+    </h1>
     <div class="max-w-xl mx-auto">
       <div
         class="bg-white rounded-md shadow h-[60vh] flex flex-col justify-between"
