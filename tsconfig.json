@@ -2,11 +2,10 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
+    "module": "ES2022",
     "types": ["vitest/globals"],
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"]
-    }
+    "moduleResolution": "NodeNext",
   },
   "include": [
     "./tests/**/*.ts",

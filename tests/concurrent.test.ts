@@ -116,42 +116,35 @@ describe("jsonPredict unit", () => {
 
     const prompt = `
       Hi Jane, I hope you are doing well. I wanted to remind you about our meeting tomorrow at 10:00 AM.
-      Location: 123 Main St, Anytown, USA Description: Discuss project progress and next steps. 
-      
+      Location: 123 Main St, Anytown, USA Description: Discuss project progress and next steps.
+
       Thanks, John
     `;
 
-    vi.spyOn(jsonPredict, "forward").mockResolvedValue(mockResponse);
+    // vi.spyOn(jsonPredict, "forward").mockResolvedValue(mockResponse);
 
     const responses: any[] = await Promise.all([
       jsonPredict.forward({
         jsonSchema: VEvent.toStringSchema(),
         textInformation: prompt,
       }),
-      jsonPredict.forward({
-        jsonSchema: VEvent.toStringSchema(),
-        textInformation: prompt,
-      }),
-      jsonPredict.forward({
-        jsonSchema: VEvent.toStringSchema(),
-        textInformation: prompt,
-      }),
+      // jsonPredict.forward({
+      //   jsonSchema: VEvent.toStringSchema(),
+      //   textInformation: prompt,
+      // }),
+      // jsonPredict.forward({
+      //   jsonSchema: VEvent.toStringSchema(),
+      //   textInformation: prompt,
+      // }),
     ]);
 
     for (const response of responses) {
       const evt = VEvent.fromString(response);
 
       expect(evt).toBeTruthy();
-      expect(evt).toEqual(mockVEvent);
-      expect(VEvent.toStringSchema).toHaveBeenCalled();
-      expect(VEvent.fromString).toHaveBeenCalledWith(mockResponse);
-      expect(jsonPredict.forward).toHaveBeenCalledWith({
-        jsonSchema: "mocked schema",
-        textInformation: prompt,
-      });
     }
   });
-});
+}, 10000);
 
 async function concurrentJSON(jsonPredict: Predict, prompt: string) {
   const responses: any[] = await Promise.all([

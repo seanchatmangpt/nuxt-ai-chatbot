@@ -16,7 +16,7 @@ class MockActorSystem extends ActorSystem {
   }
 
   publishMessage = vi.fn();
-  sendMessage = vi.fn();
+  send = vi.fn();
 }
 
 class TestActor extends BaseActor {
@@ -68,9 +68,9 @@ describe("TestActor", () => {
     const targetActorId = 2;
     const testMessage = new TestMessage();
 
-    testActor.sendMessage(targetActorId, testMessage);
+    testActor.send(targetActorId, testMessage);
 
-    expect(mockActorSystem.sendMessage).toHaveBeenCalledWith(
+    expect(mockActorSystem.send).toHaveBeenCalledWith(
       targetActorId,
       testMessage,
     );

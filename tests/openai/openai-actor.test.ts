@@ -20,14 +20,13 @@ describe("OpenAIActor integration with ActorSystem", () => {
 
   it("should process OpenAICommandMessage and publish OpenAIEventMessage", async () => {
     // Mock the publish method to intercept the OpenAIEventMessage
-    const publishSpy = vi.spyOn(actorSystem, "publishMessage");
+    const publishSpy = vi.spyOn(actorSystem, "publish");
 
     // Create a command message and send it to the OpenAIActor
     const commandMessage = new OpenAICommandMessage({
-      actorId: openAIActor.actorId,
       content: JSON.stringify(["Hello, world!"]), // Assuming the message content is expected to be a stringified array
     });
-    actorSystem.publishMessage(commandMessage);
+    actorSystem.publish(commandMessage);
 
     // Wait for the async operation
     await vi.runAllTimers(); // Ensure you have called vi.useFakeTimers() if your actor does async work
@@ -37,11 +36,10 @@ describe("OpenAIActor integration with ActorSystem", () => {
   it("should process OpenAICommandMessage and publish OpenAIEventMessage", async () => {
     const eventMessagePromise = actorSystem.waitForMessage(OpenAIEventMessage);
 
-    actorSystem.publishMessage(
+    actorSystem.publish(
       new OpenAICommandMessage({
-        actorId: openAIActor.actorId,
         content: JSON.stringify(["Hello, world!"]),
-        messageType: "OpenAICommand",
+        attributes: { messageType: "OpenAICommand" },
       }),
     );
 

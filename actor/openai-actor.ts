@@ -3,21 +3,21 @@ import OpenAI from "openai";
 
 class OpenAICommandMessage extends BaseMessage {
   constructor(data: Partial<BaseMessage>) {
-    super({ ...data, messageType: "OpenAICommand" });
+    super({ ...data, attributes: { messageType: "OpenAICommand" } });
   }
 }
 
 class OpenAIEventMessage extends BaseMessage {
   constructor(data: Partial<BaseMessage>) {
-    super({ ...data, messageType: "OpenAIEvent" });
+    super({ ...data, attributes: { messageType: "OpenAIEvent" } });
   }
 }
 
 class OpenAIActor extends BaseActor {
   private openai: any; // Assuming the OpenAI SDK or equivalent client is initialized here.
 
-  constructor(actorId: number, actorSystem: ActorSystem) {
-    super(actorId, actorSystem);
+  constructor(actorSystem: ActorSystem, actorId: string) {
+    super(actorSystem, actorId);
     this.openai = new OpenAI();
   }
 
@@ -38,7 +38,6 @@ class OpenAIActor extends BaseActor {
         // Publishing the event with the response
         this.publish(
           new OpenAIEventMessage({
-            actorId: this.actorId,
             content: resultContent,
           }),
         );

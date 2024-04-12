@@ -1,8 +1,8 @@
 <script setup>
 const messages = ref([
   {
-    role: "assistant",
-    content: "Hello! How can I help you?",
+    role: "system",
+    content: "You are a kids chatbot.",
   },
 ]);
 const loading = ref(false);
@@ -59,7 +59,7 @@ const sendPrompt = async () => {
 <template>
   <div class="max-w-xl mx-auto text-black">
     <h1 class="my-8 text-5xl font-bold text-center text-black">
-      AI Chatbot v2024.4.5
+      Kid's Chatbot
     </h1>
     <div class="max-w-xl mx-auto">
       <div
@@ -78,7 +78,7 @@ const sendPrompt = async () => {
                 {{ message.content }}
               </div>
             </div>
-            <div v-else class="pl-8 ml-auto">
+            <div v-else-if="message.role === 'user'" class="pl-8 ml-auto">
               <div class="p-2 mt-1 text-sm text-white bg-blue-400 rounded-lg">
                 {{ message.content }}
               </div>

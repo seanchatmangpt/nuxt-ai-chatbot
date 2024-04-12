@@ -1,31 +1,35 @@
 // server/api/chat.post.ts
 import { ActorSystem } from "dpgjs";
+import { readBody } from "h3";
 import {
-  OpenAIActor,
-  OpenAICommandMessage,
-  OpenAIEventMessage,
-} from "@/actor/openai-actor";
-import { readBody } from "h3"; // Assuming you're using h3 for HTTP utilities in Nuxt 3
+  KidsChatbotActor,
+  RandomMessage,
+  KidsChatbotEventMessage,
+} from "@/actor/kids-chatbot-actor";
 
 export default defineEventHandler(async (event) => {
   // Assuming there's a global or shared ActorSystem instance you can access
   const actorSystem = new ActorSystem();
-  const openAIActor = actorSystem.actorOf(OpenAIActor);
+  const openAIActor = actorSystem.actorOf(KidsChatbotActor);
 
   const previousMessages = JSON.parse(await readBody(event));
 
   // Create a command message with the previous messages serialized as a JSON string
-  const commandMessage = new OpenAICommandMessage({
+  const commandMessage = new RandomMessage({
     content: JSON.stringify(previousMessages),
   });
 
+  console.log(commandMessage.content);
+
   // Send the command message to the OpenAIActor
-  actorSystem.publishMessage(commandMessage);
+  actorSystem.publish(commandMessage);
 
   // Here we assume an enhanced ActorSystem with the ability to wait for a specific message type
   // This might require custom implementation within your ActorSystem class
   try {
-    const eventMessage = await actorSystem.waitForMessage(OpenAIEventMessage);
+    const eventMessage = await actorSystem.waitForMessage(
+      KidsChatbotEventMessage,
+    );
     return {
       role: "assistant",
       content: eventMessage.content,
