@@ -1,176 +1,88 @@
-<script setup>
-const messages = ref([
-  {
-    role: "system",
-    content: "You are a kids chatbot.",
-  },
-]);
-const loading = ref(false);
-const message = ref("");
-
-const scrollToEnd = () => {
-  setTimeout(() => {
-    const chatMessages = document.querySelector(
-      ".chat-messages > div:last-child",
-    );
-    chatMessages?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, 100);
-};
-
-const sendPrompt = async () => {
-  console.log("sendPrompt called");
-  if (message.value === "") return;
-  console.log("message.value", message.value);
-  loading.value = true;
-
-  messages.value.push({
-    role: "user",
-    content: message.value,
-  });
-
-  scrollToEnd();
-  message.value = "";
-
-  const res = await fetch(`/api/chat`, {
-    body: JSON.stringify(messages.value.slice(1)),
-    method: "post",
-  });
-
-  if (res.status === 200) {
-    const response = await res.json();
-    console.log("response", response);
-    messages.value.push({
-      role: "assistant",
-      content: response?.content,
-    });
-    console.log("messages", messages);
-  } else {
-    messages.value.push({
-      role: "assistant",
-      content: "Sorry, an error occurred.",
-    });
-  }
-
-  loading.value = false;
-  scrollToEnd();
-};
-</script>
-
 <template>
-  <div class="max-w-xl mx-auto text-black">
-    <h1 class="my-8 text-5xl font-bold text-center text-black">
-      Kid's Chatbot
-    </h1>
-    <div class="max-w-xl mx-auto">
-      <div
-        class="bg-white rounded-md shadow h-[60vh] flex flex-col justify-between"
+  <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h1
+        class="text-center text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-10"
       >
-        <div class="h-full overflow-auto chat-messages">
-          <div
-            v-for="(message, i) in messages"
-            :key="i"
-            class="flex flex-col p-4"
-          >
-            <div v-if="message.role === 'assistant'" class="pr-8 mr-auto">
-              <div
-                class="p-2 mt-1 text-sm text-gray-700 bg-gray-200 rounded-lg text-smp-2"
-              >
-                {{ message.content }}
-              </div>
-            </div>
-            <div v-else-if="message.role === 'user'" class="pl-8 ml-auto">
-              <div class="p-2 mt-1 text-sm text-white bg-blue-400 rounded-lg">
-                {{ message.content }}
-              </div>
-            </div>
-          </div>
-          <div class="p-4 ml-10 mr-auto" v-if="loading">
-            <span class="loader"></span>
-          </div>
-        </div>
-        <form @submit.prevent="sendPrompt">
-          <div class="flex items-center w-full p-4">
-            <input
-              v-model="message"
-              type="text"
-              placeholder="Type here..."
-              class="w-full p-1 text-sm text-black bg-transparent bg-gray-100 border rounded-md shadow border-white/40 grow"
-            />
-            <button
-              :disabled="loading"
-              type="submit"
-              class="flex items-center justify-center flex-none w-10 h-10 ml-2 bg-green-500 rounded-full"
+        Discover AI Integration Solutions
+      </h1>
+      <p class="mt-4 max-w-xl mx-auto text-center text-xl text-gray-500">
+        Explore how leading-edge AI solutions are transforming industries.
+      </p>
+
+      <div class="mt-10">
+        <ul
+          class="space-y-12 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
+        >
+          <li class="hover:scale-105 transition-transform duration-500">
+            <NuxtLink
+              to="/ck-davis-trends/leveraging-ai-for-project-success"
+              class="space-y-4"
             >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22 2L11 13"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M22 2L15 22L11 13L2 9L22 2Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </form>
+              <!-- Replace with your actual image -->
+              <img
+                class="mx-auto h-20 lg:h-24"
+                src="~/assets/ck-davis-logo.png"
+                alt="CK Davis Trends"
+              />
+              <div class="space-y-2">
+                <div class="text-lg leading-6 font-medium space-y-1">
+                  <h3>CK Davis Trends</h3>
+                  <p class="text-indigo-600">
+                    Leveraging AI for Project Success
+                  </p>
+                </div>
+              </div>
+            </NuxtLink>
+          </li>
+
+          <li class="hover:scale-105 transition-transform duration-500">
+            <NuxtLink
+              to="/nexus-systems-group/transform-your-business-with-ai"
+              class="space-y-4"
+            >
+              <!-- Replace with your actual image -->
+              <img
+                class="mx-auto h-20 lg:h-24"
+                src="~/assets/nexus-logo.png"
+                alt="Nexus Systems Group"
+              />
+              <div class="space-y-2">
+                <div class="text-lg leading-6 font-medium space-y-1">
+                  <h3>Nexus Systems Group</h3>
+                  <p class="text-indigo-600">Transform Your Business with AI</p>
+                </div>
+              </div>
+            </NuxtLink>
+          </li>
+
+          <li class="hover:scale-105 transition-transform duration-500">
+            <NuxtLink
+              to="/total-cover-it/elevate-your-cpa-firm-with-ai"
+              class="space-y-4"
+            >
+              <!-- Replace with your actual image -->
+              <img
+                class="mx-auto h-20 lg:h-24"
+                src="~/assets/total-cover-it-logo.png"
+                alt="Total Cover It"
+              />
+              <div class="space-y-2">
+                <div class="text-lg leading-6 font-medium space-y-1">
+                  <h3>Total Cover It</h3>
+                  <p class="text-indigo-600">Elevate Your CPA Firm with AI</p>
+                </div>
+              </div>
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
     </div>
-    <!--    <div class="flex flex-col justify-center w-full my-4">-->
-    <!--    </div>-->
   </div>
 </template>
 
-<style>
-.loader {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  color: #d3d3d3;
-  box-sizing: border-box;
-  animation: animloader 2s linear infinite;
-}
+<script setup></script>
 
-@keyframes animloader {
-  0% {
-    box-shadow:
-      14px 0 0 -2px,
-      38px 0 0 -2px,
-      -14px 0 0 -2px,
-      -38px 0 0 -2px;
-  }
-  25% {
-    box-shadow:
-      14px 0 0 -2px,
-      38px 0 0 -2px,
-      -14px 0 0 -2px,
-      -38px 0 0 2px;
-  }
-  50% {
-    box-shadow:
-      14px 0 0 -2px,
-      38px 0 0 -2px,
-      -14px 0 0 2px,
-      -38px 0 0 -2px;
-  }
-  75% {
-    box-shadow:
-      14px 0 0 2px,
-      38px 0 0 -2px;
-  }
-}
+<style scoped>
+/* You can add additional global styles in your tailwind.config.js or a global stylesheet */
 </style>

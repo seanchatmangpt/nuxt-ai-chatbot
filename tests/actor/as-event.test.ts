@@ -1,7 +1,7 @@
 // tests/actorSystem.tests.ts
 import { describe, it, expect, beforeEach } from "vitest";
-import MockScheduler from "../mock/mock-scheduler";
-import { checkForEventConflicts } from "../mock/mock-event-scheduler";
+import MockScheduler from "../mocks/mock-scheduler.js";
+import { checkForEventConflicts } from "../mocks/mock-event-scheduler.js";
 
 describe("Actor System Event Scheduling", () => {
   let mockScheduler: MockScheduler;

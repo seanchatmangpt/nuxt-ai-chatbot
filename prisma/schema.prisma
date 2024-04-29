@@ -1,0 +1,13 @@
+model Participant {
+  id            Int      @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  title         String
+  company       String
+  companyPhone  String
+  cellPhone     String
+  email         String   @unique
+  webPage       String?
+  assessments   Json
+  createdAt     DateTime @default(now())
+}
