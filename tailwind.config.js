@@ -7,7 +7,9 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
+    "./formkit.theme.ts", // <-- add your theme file
   ],
+  darkMode: "class",
   theme: {
     extend: {},
   },

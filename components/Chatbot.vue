@@ -6,7 +6,7 @@ const store = useCheckboxStore();
 const messages = ref([
   {
     role: "assistant",
-    content: "Hello! How can I help you?",
+    content: "Hello! How can I help assess your AI usage?",
   },
 ]);
 const loading = ref(false);
@@ -107,7 +107,9 @@ const sendPrompt = async () => {
 
 <template>
   <div class="max-w-xl mx-auto text-black">
-    <h1 class="my-8 text-5xl font-bold text-center text-black">AI Chatbot</h1>
+    <h1 class="my-8 text-5xl font-bold text-center text-gray-400">
+      AI Assessment
+    </h1>
     <div class="max-w-xl mx-auto">
       <div
         class="bg-white rounded-md shadow h-[60vh] flex flex-col justify-between"

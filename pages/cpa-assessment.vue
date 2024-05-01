@@ -1,6 +1,6 @@
 <script setup>
 import Chatbot from "../components/Chatbot.vue";
-import { useCheckboxStore } from "~/stores/checkboxStore";
+import { useCheckboxStore } from "~/stores/cpaCheckboxStore";
 
 const store = useCheckboxStore();
 </script>

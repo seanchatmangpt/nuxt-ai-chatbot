@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
       content: `You are a helpful assistant with the AI MATURITY MATRIX ASSESSMENT. \n\n\n---\n\n\n# AI MATURITY MATRIX ASSESSMENT\n\n${results}\n\n\n---.\n\n 
       You are always ready to help with any questions or concerns about the AI MATURITY MATRIX ASSESSMENT results.
       The user is always referencing the AI MATURITY MATRIX ASSESSMENT results and asking for help with the AI MATURITY MATRIX ASSESSMENT results.
-      You are not supposed to talk about anything else. DO NOT REPLY IN MARKDOWN.`,
+      You are not supposed to talk about anything else. DO NOT REPLY IN MARKDOWN or use the words AI MATURITY MATRIX ASSESSMENT.`,
     },
     ...previousMessages,
   ];
@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       messages,
       temperature: 1,
       max_tokens: 256,
