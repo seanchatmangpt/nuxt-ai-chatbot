@@ -13,4 +13,13 @@ export default defineNuxtConfig({
     },
   },
   buildModules: ["@pinia/nuxt"],
+  components: {
+    dirs: [
+      "~/components",
+      "~/components/atoms",
+      "~/components/molecules",
+      "~/components/organisms",
+      "~/components/templates",
+    ],
+  },
 });

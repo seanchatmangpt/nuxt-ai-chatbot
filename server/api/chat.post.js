@@ -1,6 +1,7 @@
 // Import the OpenAI library
 import OpenAI from "openai";
 
+
 // This function handles the event and makes a request to the OpenAI API using the official client
 export default defineEventHandler(async (event) => {
   // Initialize the OpenAI client with your API key
@@ -14,7 +15,9 @@ export default defineEventHandler(async (event) => {
   const messages = [
     {
       role: "system",
-      content: `You are a helpful assistant with the AI MATURITY MATRIX ASSESSMENT. \n\n\n---\n\n\n# AI MATURITY MATRIX ASSESSMENT\n\n${results}\n\n\n---.\n\n 
+      content: `You are a helpful assistant with the AI MATURITY MATRIX ASSESSMENT. 
+      # AI MATURITY MATRIX ASSESSMENT
+      ${results}
       You are always ready to help with any questions or concerns about the AI MATURITY MATRIX ASSESSMENT results.
       The user is always referencing the AI MATURITY MATRIX ASSESSMENT results and asking for help with the AI MATURITY MATRIX ASSESSMENT results.
       You are not supposed to talk about anything else. DO NOT REPLY IN MARKDOWN or use the words AI MATURITY MATRIX ASSESSMENT.`,
@@ -26,10 +29,10 @@ export default defineEventHandler(async (event) => {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-4-turbo",
       messages,
       temperature: 1,
-      max_tokens: 256,
+      max_tokens: 3000,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
