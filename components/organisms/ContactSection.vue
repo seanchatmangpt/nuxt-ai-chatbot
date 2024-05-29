@@ -12,10 +12,6 @@
           >info@chatmangpt.com</a
         >
       </li>
-      <li>Phone: (888) 918-0377</li>
-      <li>General Inquiries: hello@care.ai</li>
-      <li>Media Relations: pr@care.ai</li>
-      <li>Product Support: support@care.ai</li>
     </ul>
   </section>
 </template>
