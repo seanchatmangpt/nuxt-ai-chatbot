@@ -1,5 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import websocket from "./server/middleware/websocket";
+
 export default defineNuxtConfig({
+  nitro: {
+    experimental: {
+      websocket: true,
+    },
+  },
   modules: ["@nuxt/test-utils/module", "@formkit/nuxt"],
   plugins: ["~/plugins/pinia.js", "~/plugins/vue-mermaid-string.js"],
   css: ["~/assets/css/main.css"],

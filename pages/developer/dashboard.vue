@@ -21,9 +21,9 @@
           <ul>
             <li>Live Coding Sessions</li>
             <li>Chat and Video Calls</li>
-            <li>Collaborative Editing</li>
-          </ul>
-        </div>
+            <li><NuxtLink to="/developer/peer-to-peer">Collaborative Editing</NuxtLink></li>
+            </ul>
+              </div>
 
         <!-- Automated Payments Section -->
         <div class="p-4 border border-gray-300">

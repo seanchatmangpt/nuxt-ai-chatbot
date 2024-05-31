@@ -5,66 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76997337-3597-4de6-82fa-644d4481d07b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/molecules/LedgerTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/active.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/customer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/ledger.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/project_tracking.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/projects.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/services_management.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/setup.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customer/usage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/developer/dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/developer/ledger.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/developer/payment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/pages.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/vue-mermaid-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/order.get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/order.post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stores/featuresStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Connection.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/organisms/MonacoEditor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/socket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/developer/peer-to-peer/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/plugins/socket.io.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ParticipantsTable.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RegistrationForm.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/atoms/Button.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/atoms/Input.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/atoms/Label.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/molecules/Card.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/molecules/FormGroup.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/organisms/FeaturesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/organisms/FeaturesSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/organisms/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/organisms/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/organisms/Sidebar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/organisms/WelcomeSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/organisms/WelcomeSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/templates/AuthLayout.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/templates/MainLayout.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/create-store.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/FormInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/create-tests.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/AboutPage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ContactPage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/HomePage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ck-davis-trends/admin.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ck-davis-trends/assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ck-davis-trends/leveraging-ai-for-project-success.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cpa-assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/nexus-systems-group/admin.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/nexus-systems-group/assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/nexus-systems-group/transform-your-business-with-ai.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/project-assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/total-cover-it/admin.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/total-cover-it/assessment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/total-cover-it/elevate-your-cpa-firm-with-ai.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/developer/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/developer/dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores/checkboxStore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores/cpaCheckboxStore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores/projectCheckboxStore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mocks/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/mocks/handlers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,36 +55,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.create-store.sh.executor": "Run",
-    "Shell Script.create-tests.sh.executor": "Run",
-    "Vitest.Ledger Store.executor": "Run",
-    "Vitest.Project Store.executor": "Run",
-    "Vitest.Project Store.should setup a project.executor": "Run",
-    "Vitest.Transaction Store.executor": "Run",
-    "Vitest.Usage Store.executor": "Run",
-    "Vitest.User Store.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sac/dev/nuxt-ai-chatbot/pages/customer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/sac/dev/nuxt-ai-chatbot/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.create-store.sh.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.create-tests.sh.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Ledger Store.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Project Store.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Project Store.should setup a project.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Transaction Store.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.Usage Store.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.User Store.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sac/dev/nuxt-ai-chatbot/pages/customer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sac/dev/nuxt-ai-chatbot/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages/customer" />
@@ -268,6 +218,12 @@
           <url>file://$PROJECT_DIR$/server/api/order.get.js</url>
           <line>25</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/nuxt.config.ts</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
