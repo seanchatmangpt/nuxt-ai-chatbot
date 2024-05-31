@@ -1,12 +1,12 @@
 <template>
   <div class="min-h-screen bg-gray-100 p-4">
     <div class="container mx-auto">
-      <HeaderWithLink title="Customer Dashboard" linkText="AICC" linkTo="/" />
+      <h1 class="text-4xl font-bold mb-4 border-b pb-2">AICC: Customer Dashboard</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Service Management Section -->
         <div class="p-4 border border-gray-300">
-          <NuxtLink to="/customer/services_management">
+          <NuxtLink to="/customer/services-management">
             <h2 class="text-2xl font-semibold mb-2 underline">
               Service Management
             </h2></NuxtLink
@@ -20,7 +20,7 @@
 
         <!-- Project Tracking Section -->
         <div class="p-4 border border-gray-300">
-          <NuxtLink to="/customer/project_tracking">
+          <NuxtLink to="/customer/project-tracking">
             <h2 class="text-2xl font-semibold mb-2 underline">
               Project Tracking
             </h2>
@@ -34,7 +34,7 @@
 
         <!-- Support and Assistance Section -->
         <div class="p-4 border border-gray-300">
-          <NuxtLink to="/customer/support_and_assistance">
+          <NuxtLink to="/customer/support-and-assistance">
             <h2 class="text-2xl font-semibold mb-2 underline">
               Support and Assistance
             </h2>
@@ -50,7 +50,7 @@
 
         <!-- Billing and Payments Section -->
         <div class="p-4 border border-gray-300">
-          <NuxtLink to="/customer/billing_and_payments">
+          <NuxtLink to="/customer/billing-and-payments">
             <h2 class="text-2xl font-semibold mb-2 underline">
               Billing and Payments
             </h2>
@@ -64,7 +64,7 @@
 
         <!-- Account Management Section -->
         <div class="p-4 border border-gray-300">
-          <NuxtLink to="/customer/account_management">
+          <NuxtLink to="/customer/account-management">
             <h2 class="text-2xl font-semibold mb-2 underline">
               Account Management
             </h2>

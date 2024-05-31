@@ -6,7 +6,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Code Contributions Section -->
         <div class="p-4 border border-gray-300">
-          <h2 class="text-2xl font-semibold mb-2">Code Contributions</h2>
+          <NuxtLink to="/developer/code-contributions" class="text-2xl font-semibold mb-2">Code Contributions</NuxtLink>
           <ul>
             <li>View Repository</li>
             <li>Submit Pull Requests</li>
@@ -17,7 +17,7 @@
 
         <!-- Real-Time Collaboration Section -->
         <div class="p-4 border border-gray-300">
-          <h2 class="text-2xl font-semibold mb-2">Real-Time Collaboration</h2>
+          <NuxtLink to="/developer/real-time-collaboration" class="text-2xl font-semibold mb-2">Real-Time Collaboration</NuxtLink>
           <ul>
             <li>Live Coding Sessions</li>
             <li>Chat and Video Calls</li>
@@ -27,7 +27,7 @@
 
         <!-- Automated Payments Section -->
         <div class="p-4 border border-gray-300">
-          <h2 class="text-2xl font-semibold mb-2">Automated Payments</h2>
+          <NuxtLink to="/developer/automated-payments" class="text-2xl font-semibold mb-2">Automated Payments</NuxtLink>
           <ul>
             <li>Smart Contracts</li>
             <li>Payment Calculation</li>
@@ -37,7 +37,7 @@
 
         <!-- Activity Tracking Section -->
         <div class="p-4 border border-gray-300">
-          <h2 class="text-2xl font-semibold mb-2">Activity Tracking</h2>
+          <NuxtLink to="/developer/activity-tracking" class="text-2xl font-semibold mb-2">Activity Tracking</NuxtLink>
           <ul>
             <li>Track Commits</li>
             <li>Monitor Pull Requests</li>
@@ -48,9 +48,9 @@
 
         <!-- Integration with AI Services Section -->
         <div class="p-4 border border-gray-300">
-          <h2 class="text-2xl font-semibold mb-2">
+          <NuxtLink to="/developer/integration-with-ai-services" class="text-2xl font-semibold mb-2">
             Integration with AI Services
-          </h2>
+          </NuxtLink>
           <ul>
             <li>Connect to Dapr</li>
             <li>Access DSPyGen Modules</li>
