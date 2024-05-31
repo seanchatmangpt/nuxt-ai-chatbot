@@ -12,3 +12,8 @@ header {
 a {
   font-size: 16px;
 }
+
+li {
+  border-left: 2px solid red;
+  padding-left: .5rem;
+}
