@@ -22,11 +22,10 @@ const db = factory({
 // Create handlers to respond to tRPC operations
 export const handlers = [
   // Mock the createParticipant procedure
-  rest.post("/trpc/participant.createParticipant", (req, res, ctx) => {
-    const participant = db.participant.create(req.body);
-    return res(ctx.json(participant));
-  }),
-
+  // rest.post("/trpc/participant.createParticipant", (req, res, ctx) => {
+  //   const participant = db.participant.create(req.body);
+  //   return res(ctx.json(participant));
+  // }),
   // Add handlers for getParticipants, updateParticipant, and deleteParticipant
 ];
 

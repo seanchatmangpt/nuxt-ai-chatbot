@@ -32,6 +32,7 @@
     "vitest": "^1.4.0"
   },
   "dependencies": {
+    "@dapr/dapr": "^3.3.1",
     "@formkit/nuxt": "^1.6.2",
     "@mswjs/data": "^0.16.1",
     "@pinia/nuxt": "^0.5.1",
@@ -39,12 +40,15 @@
     "@swc/jest": "^0.2.36",
     "@trpc/client": "^10.45.1",
     "@trpc/server": "^10.45.1",
+    "axios": "^1.7.2",
     "daisyui": "^4.7.2",
     "dpgjs": "^2024.4.18",
     "eventsource-parser": "^0.1.0",
     "generate-password-ts": "^1.6.5",
     "luxon": "^3.4.4",
+    "mermaid": "^10.9.1",
     "msw": "^2.2.14",
+    "nuxt-mermaid-string": "^2.0.12",
     "openai": "^4.32.0",
     "pinia": "^2.1.7",
     "stream": "^0.0.2",
@@ -54,6 +58,7 @@
     "upgrade": "^1.1.0",
     "uuid": "^9.0.1",
     "vanilla-cookieconsent": "^3.0.0",
+    "vue-mermaid-string": "^6.0.0",
     "wide-align": "^1.1.5",
     "zod": "^3.22.4"
   },
