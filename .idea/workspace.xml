@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76997337-3597-4de6-82fa-644d4481d07b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Connection.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/organisms/MonacoEditor.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/socket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/developer/peer-to-peer/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/plugins/socket.io.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/GlobalCommandPalette.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/navTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/developer/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/developer/dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +73,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build:all.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sac/dev/nuxt-ai-chatbot/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
@@ -96,45 +98,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="Project Store" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/stores/projectStore.test.js" />
-      <test-names>
-        <test-name value="Project Store" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Transaction Store" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/stores/transactionStore.test.js" />
-      <test-names>
-        <test-name value="Transaction Store" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Usage Store" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/stores/usageStore.test.js" />
-      <test-names>
-        <test-name value="Usage Store" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="User Store" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -146,6 +109,36 @@
       <test-names>
         <test-name value="User Store" />
       </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../backstage/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:all" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../backstage/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../backstage/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -161,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.clean" />
+        <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.build:all" />
         <item itemvalue="Vitest.User Store" />
-        <item itemvalue="Vitest.Usage Store" />
-        <item itemvalue="Vitest.Transaction Store" />
-        <item itemvalue="Vitest.Project Store" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +183,7 @@
       <workItem from="1717026038454" duration="1885000" />
       <workItem from="1717028182002" duration="2444000" />
       <workItem from="1717089336756" duration="18319000" />
+      <workItem from="1717221490750" duration="967000" />
     </task>
     <servers />
   </component>
@@ -221,8 +215,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/nuxt.config.ts</url>
-          <line>11</line>
-          <properties lambdaOrdinal="-1" />
+          <line>16</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

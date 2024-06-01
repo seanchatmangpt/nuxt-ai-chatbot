@@ -9,6 +9,7 @@
     </main>
     <Footer />
   </div>
+  <GlobalCommandPalette />
 </template>
 
 <script setup>
@@ -18,6 +19,8 @@ import WelcomeSection from "../components/organisms/WelcomeSection.vue";
 import FeaturesSection from "../components/organisms/FeaturesSection.vue";
 import TestimonialsSection from "../components/organisms/TestimonialsSection.vue";
 import ContactSection from "../components/organisms/ContactSection.vue";
+
+import GlobalCommandPalette from "~/components/GlobalCommandPalette.vue";
 </script>
 
 <style scoped></style>
