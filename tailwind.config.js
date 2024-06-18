@@ -9,7 +9,6 @@ module.exports = {
     "./app.vue",
     "./formkit.theme.ts", // <-- add your theme file
   ],
-  darkMode: "class",
   theme: {
     extend: {},
   },

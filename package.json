@@ -8,7 +8,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "publish": "vercel --prod",
-    "bump": "python -m bump"
+    "bump": "python -m bump",
+    "docker:build": "docker build -t my-nuxt-app .",
+    "docker:run": "docker run -p 3000:3000 my-nuxt-app"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.13.1",
@@ -42,6 +44,7 @@
     "@swc/jest": "^0.2.36",
     "@trpc/client": "^10.45.2",
     "@trpc/server": "^10.45.2",
+    "annyang": "^2.6.1",
     "axios": "^1.7.2",
     "daisyui": "^4.11.1",
     "dpgjs": "^2024.4.21",

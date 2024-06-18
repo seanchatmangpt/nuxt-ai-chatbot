@@ -32,6 +32,9 @@ importers:
       '@trpc/server':
         specifier: ^10.45.2
         version: 10.45.2
+      annyang:
+        specifier: ^2.6.1
+        version: 2.6.1
       axios:
         specifier: ^1.7.2
         version: 1.7.2
@@ -1900,6 +1903,9 @@ packages:
 
   akkajs@1.0.1:
     resolution: {integrity: sha512-9Q6Hdx5Sxj/aHpjuNhYun2MDeyL1D8sb6JeUPpzNEErmt1CbHIFHzMSsi+v2UgT6xPsFO6WEgdWVoQE207x+ew==}
+
+  annyang@2.6.1:
+    resolution: {integrity: sha512-KfO6FVFmE7H7epXgAWRoGITShVqsDs6zLKuTxDiJHZmAVnpKeUAKiMUIr7hDXbNUOqRIB3RVTQQd/Yaf4ULauw==}
 
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
@@ -8028,6 +8034,8 @@ snapshots:
       indent-string: 4.0.0
 
   akkajs@1.0.1: {}
+
+  annyang@2.6.1: {}
 
   ansi-colors@4.1.3: {}
 

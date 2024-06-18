@@ -25,11 +25,11 @@ export default defineNitroPlugin((nitroApp) => {
   });
 
   // Send mock messages every 5 seconds
-  setInterval(() => {
-    const mockMessage = faker.lorem.sentence();
-    io.emit("message", mockMessage);
-    console.log("Mock message sent:", mockMessage);
-  }, 5000);
+  // setInterval(() => {
+  //   const mockMessage = faker.lorem.sentence();
+  //   io.emit("message", mockMessage);
+  //   console.log("Mock message sent:", mockMessage);
+  // }, 5000);
 
   nitroApp.router.use(
     "/socket.io/",

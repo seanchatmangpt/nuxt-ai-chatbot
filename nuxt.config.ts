@@ -10,9 +10,14 @@ export default defineNuxtConfig({
         implementation: require("sass"),
       },
     },
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   },
   modules: ["@nuxt/test-utils/module", "@formkit/nuxt"],
-  plugins: ["~/plugins/pinia.js", "~/plugins/vue-mermaid-string.js"],
   css: ["~/assets/css/main.scss"],
   runtimeConfig: {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
@@ -23,7 +28,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  buildModules: ["@pinia/nuxt"],
+  buildModules: ["@pinia/nuxt", "@nuxtjs/composition-api/module"],
   components: {
     dirs: [
       "~/components",

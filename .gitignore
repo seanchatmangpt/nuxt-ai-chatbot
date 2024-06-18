@@ -9,3 +9,5 @@ dist
 .vercel
 .idea
 /.idea
+.DS_Store
+.idea/workspace.xml
